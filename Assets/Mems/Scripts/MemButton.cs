@@ -38,17 +38,12 @@ public class MemButton : MonoBehaviour
     }
     private void Start()
     {
-        //if (_videoImage)
-        //{
-        //    _videoPlayer.frame = _frameVideoImage;
-        //    _videoPlayer.Pause();
-        //}
+
     }
 
     public void _PlayVideo()
     {
         _videoPlayer.Play();
-        //_videoPlayer.playbackSpeed = 1;
     }
 
     private void OnValidate()
