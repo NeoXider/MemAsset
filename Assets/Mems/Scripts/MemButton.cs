@@ -17,7 +17,7 @@ public class MemButton : MonoBehaviour
     private VideoPlayer _videoPlayer;
 
     
-    void Start()
+    private void Awake()
     {
         //_rawImage = GetComponent<RawImage>();
         _videoRender = Instantiate(_videoRender);  //Позволяет воспроизводить одновременно разные видео
@@ -25,18 +25,30 @@ public class MemButton : MonoBehaviour
         _rawImage.texture = _videoRender;
         _videoPlayer.clip = _videoMem;
         _videoPlayer.targetTexture = _videoRender;
+    }
+
+    private void OnEnable()
+    {
         if (_videoImage)
         {
             _videoPlayer.frame = _frameVideoImage;
             _videoPlayer.playOnAwake = true;
             _videoPlayer.Pause();
         }
-            
+    }
+    private void Start()
+    {
+        //if (_videoImage)
+        //{
+        //    _videoPlayer.frame = _frameVideoImage;
+        //    _videoPlayer.Pause();
+        //}
     }
 
     public void _PlayVideo()
     {
         _videoPlayer.Play();
+        //_videoPlayer.playbackSpeed = 1;
     }
 
     private void OnValidate()
@@ -44,7 +56,9 @@ public class MemButton : MonoBehaviour
         if (_videoImage)
         {
             if(_videoPlayer != null)
+            {
                 _videoPlayer.frame = _frameVideoImage;
+            }      
         }
     }
 }

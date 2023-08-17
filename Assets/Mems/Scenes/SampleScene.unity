@@ -2146,14 +2146,22 @@ PrefabInstance:
     - target: {fileID: 1843939260288143969, guid: d39b2b40e17d99745b3f76c1af2d5821, type: 3}
       propertyPath: m_VideoClip
       value: 
-      objectReference: {fileID: 32900000, guid: 8aba2a7b06344954b9bccdb0f613e12c, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 1843939260288143969, guid: d39b2b40e17d99745b3f76c1af2d5821, type: 3}
       propertyPath: m_SkipOnDrop
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1843939260288143969, guid: d39b2b40e17d99745b3f76c1af2d5821, type: 3}
+      propertyPath: m_AspectRatio
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1843939260288143969, guid: d39b2b40e17d99745b3f76c1af2d5821, type: 3}
       propertyPath: m_PlayOnAwake
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1843939260288143969, guid: d39b2b40e17d99745b3f76c1af2d5821, type: 3}
+      propertyPath: m_TimeUpdateMode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1843939260288143969, guid: d39b2b40e17d99745b3f76c1af2d5821, type: 3}
       propertyPath: m_WaitForFirstFrame
