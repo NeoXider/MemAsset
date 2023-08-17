@@ -10,6 +10,7 @@ public class MemButton : MonoBehaviour
     [Header("Settings")]
     [SerializeField] private bool _videoImage = false; //включение картинки видео
     [SerializeField] private long _frameVideoImage = 1; //кадр картинки видео
+    [SerializeField] private long _startFramePlay = 1; //с какого кадра воспроизводится видео если 0 воспроизводит с кадра ккартинки
 
     [Header("VideoRender")]
     public RenderTexture _videoRender;
@@ -43,6 +44,9 @@ public class MemButton : MonoBehaviour
 
     public void _PlayVideo()
     {
+        if(_startFramePlay <= 0)
+            _videoPlayer.frame = _startFramePlay;
+
         _videoPlayer.Play();
     }
 
