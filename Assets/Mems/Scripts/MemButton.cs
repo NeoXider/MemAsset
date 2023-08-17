@@ -44,7 +44,8 @@ public class MemButton : MonoBehaviour
 
     public void _PlayVideo()
     {
-        if(_startFramePlay <= 0)
+        Debug.Log("Play " + gameObject.name);
+        if(_startFramePlay > 0)
             _videoPlayer.frame = _startFramePlay;
 
         _videoPlayer.Play();
