@@ -32,8 +32,8 @@ public class MemButton : MonoBehaviour
     {
         if (_videoImage)
         {
-            _videoPlayer.frame = _frameVideoImage;
             _videoPlayer.playOnAwake = true;
+            _videoPlayer.frame = _frameVideoImage;
             _videoPlayer.Pause();
         }
     }
